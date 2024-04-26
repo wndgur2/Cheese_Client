@@ -1,6 +1,5 @@
 "use client";
 
-import BigBtn from "@/components/BigBtn";
 import { useEffect, useState } from "react";
 import homeStyles from "./home.module.css";
 import TextBtn from "@/components/TextBtn";
@@ -9,6 +8,7 @@ import SharedPhoto from "@/entity/SharedPhoto";
 import Branch from "@/entity/Branch";
 import CheeseMapBtn from "@/components/CheeseMapBtn";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 function guid() {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
@@ -116,10 +116,10 @@ export default function Home() {
     return (
         <div
             className="container"
-            style={{ height: "calc(96vh - 64px)", overflowY: "scroll" }}
+            style={{ height: "calc(100vh - 64px)", overflowY: "scroll" }}
         >
-            <div className="alignCenter">
-                <div style={{ width: "100%", paddingLeft: "1vw" }}>
+            <div className="alignCenter" style={{ width: "100%" }}>
+                <div style={{ width: "80%", paddingLeft: "1vw" }}>
                     {branch ? (
                         <div>
                             <span className="title">
@@ -235,5 +235,65 @@ export default function Home() {
             <br />
             <br />
         </div>
+    );
+}
+
+function BigBtn({ enabled, href, src, children }) {
+    return (
+        <Link
+            href={enabled ? href : ""}
+            style={{
+                width: "45%",
+                height: "100%",
+            }}
+        >
+            <div
+                style={{
+                    display: "flex",
+                    width: "100%",
+                    height: "100%",
+                }}
+            >
+                <button
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "14px",
+                        backgroundColor: `${enabled ? "#FFD56A" : "#FEFBF6"}`,
+                        border: "none",
+                        boxShadow: "1px 1px 10px 1px rgba(0, 0, 0, 0.10)",
+                        // todo
+                        width: "100%",
+                        height: "100%",
+                        lineHeight: "normal",
+                    }}
+                >
+                    <div
+                        style={{
+                            width: "36%",
+                            height: "36%",
+                            backgroundImage: "url(" + src + ")",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                        }}
+                    />
+                    {children ? (
+                        <p
+                            style={{
+                                fontSize: "2vh",
+                                margin: "1vh 0px 0px 0px",
+                            }}
+                        >
+                            {children}
+                        </p>
+                    ) : (
+                        <></>
+                    )}
+                </button>
+            </div>
+        </Link>
     );
 }

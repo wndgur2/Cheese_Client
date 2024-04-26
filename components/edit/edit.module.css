@@ -1,6 +1,7 @@
 .topContainer {
     background-color: #f9f7f6;
     height: 100vh;
+    width: 100%;
 }
 #album {
     display: flex;
@@ -25,12 +26,12 @@
     display: flex;
     align-items: center;
 
-    width: 25vw;
+    width: 10vh;
     height: 100%;
 }
 
 #curPage {
-    width: 25vw;
+    width: 10vh;
     height: 100%;
     opacity: 0.5;
 }
@@ -38,13 +39,13 @@
 #pageControlWrapper {
     display: flex;
     align-items: center;
-    width: 25vw;
+    width: 10vh;
     height: 100%;
-    margin-left: -25vw;
+    margin-left: -10vh;
 }
 
 #pageControl {
-    outline: solid #ffc121 1vw;
+    outline: solid #ffc121 0.5vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -68,14 +69,13 @@
 
 .preview canvas {
     height: 35vh;
-    width: 100%;
     position: absolute;
 }
 
 #functionBar {
     height: 48px;
     justify-content: space-between;
-    margin: 1vh 2vw;
+    margin: 1vh;
 }
 
 #undoWrapper {
@@ -103,7 +103,7 @@
     overflow-y: scroll;
     overflow-x: visible;
     height: calc((53vh - 48px));
-    margin: 1vh 2vw;
+    margin: 1vh;
 }
 
 #navBar {
@@ -114,7 +114,7 @@
     align-items: center;
     justify-content: space-between;
     overflow-x: scroll;
-    gap: 3vw;
+    gap: 1vh;
     width: 100%;
     height: 64px;
     margin-top: -64px;
@@ -134,8 +134,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 2vh 0px;
-    padding: 2vh 3vw;
+    margin: 2vh 2vh;
+    padding: 2vh;
 
     background-color: #fefbf6;
 

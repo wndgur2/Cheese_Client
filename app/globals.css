@@ -76,16 +76,16 @@ body {
 }
 
 .dot {
-    height: 1.5vw;
-    width: 1.5vw;
+    height: 1vh;
+    width: 1vh;
     background-color: #d9d9d9;
     border-radius: 50%;
     display: inline-block;
 }
 
 .dotFilled {
-    height: 1.5vw;
-    width: 1.5vw;
+    height: 1vh;
+    width: 1vh;
     background-color: #ffb800;
     border-radius: 50%;
     display: inline-block;
@@ -125,10 +125,10 @@ body {
 }
 .loader {
     position: absolute;
-    top: 20vh;
-    left: 20vw;
-    width: 60vw;
-    height: 60vh;
+    top: 40vh;
+    left: calc(50vw - 20vh);
+    width: 40vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
