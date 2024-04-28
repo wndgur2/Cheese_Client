@@ -12,7 +12,7 @@ function LongBtn({ colored, children, onclick }) {
                 gap: "3vh",
                 boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.10)",
                 width: "86%",
-                height: "6vh",
+                height: "5vh",
             }}
             onClick={onclick}
         >
