@@ -394,8 +394,8 @@ export default function Edit({ searchParams }) {
                             <NavBtn
                                 src={`/edit/${
                                     nav == name[0]
-                                        ? name[0] + "_accent"
-                                        : name[0]
+                                        ? name[0].toLowerCase() + "_accent"
+                                        : name[0].toLowerCase()
                                 }.png`}
                                 width="24"
                                 active={nav == name[0]}
