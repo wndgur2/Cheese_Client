@@ -215,7 +215,9 @@ export default function Edit({ searchParams }) {
 
     return (
         <div ref={fullscreen}>
-            <Script src="http://cdn.jsdelivr.net/g/filesaver.js" />
+            {/* <Script src="http://cdn.jsdelivr.net/g/filesaver.js" /> */}
+            <Script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js" />
+
             <div className={editStyles.topContainer}>
                 <div
                     style={{ display: "flex", justifyContent: "space-between" }}
