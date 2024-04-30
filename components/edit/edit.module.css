@@ -84,15 +84,16 @@
     height: calc((54vh - 48px));
     /* width:  */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
 .editBody > div {
-    padding-top: 4vh;
-    min-height: 50vh;
+    padding-top: 2vh;
+    /* min-height: 50vh; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -101,7 +102,6 @@
 }
 
 #navBar {
-    /* TODO */
     /* position: absolute; */
     position: relative;
     display: flex;

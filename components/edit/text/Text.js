@@ -100,9 +100,10 @@ export default function Text({ page }) {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        width: "100%",
                     }}
                 >
-                    <div style={{ width: "25vh" }}>
+                    <div style={{ width: "50%" }}>
                         <Range
                             min={30}
                             fixThumbSize={true}
@@ -142,10 +143,10 @@ export default function Text({ page }) {
                     style={{
                         display: "flex",
                         height: "6vh",
-                        padding: "0 4vw",
+                        padding: "0 2vh",
                         alignItems: "center",
                         justifyContent: "space-around",
-                        gap: "2vw",
+                        gap: "1vh",
                     }}
                 >
                     <input

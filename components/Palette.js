@@ -23,15 +23,16 @@ function Palette({ color, setColor, disabled }) {
                 gap: "calc(2vh - 4px)",
                 margin: "2vh 0vh",
                 justifyContent: "center",
+                width: "100%",
             }}
         >
             {colors.map((c, i) => (
                 <div
                     key={i}
                     style={{
-                        width: "6vh",
-                        height: "6vh",
-                        borderRadius: "6vh",
+                        width: "12%",
+                        aspectRatio: "1/1",
+                        borderRadius: "120px",
                         background: disabled ? "#CCC" : c,
                         outlineStyle:
                             (c == color || c == "#FFFFFF") && !disabled

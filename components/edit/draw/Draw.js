@@ -31,14 +31,16 @@ export default function Draw({ page }) {
     return (
         <div>
             <div className={editStyles.editWrapper}>
-                <Range
-                    color={color}
-                    disabled={state == "bucket"}
-                    value={brushSize}
-                    setValue={setBrushSize}
-                >
-                    px
-                </Range>
+                <div style={{ width: "80%" }}>
+                    <Range
+                        color={color}
+                        disabled={state == "bucket"}
+                        value={brushSize}
+                        setValue={setBrushSize}
+                    >
+                        px
+                    </Range>
+                </div>
                 <Palette
                     color={color}
                     setColor={setColor}
